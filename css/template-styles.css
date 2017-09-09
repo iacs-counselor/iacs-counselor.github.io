@@ -1,0 +1,95 @@
+@font-face {
+    font-family: 'Bebas';
+    src: url('../font/bebas.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Gnuolane';
+    src: url('../font/gnuolane.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Caecilia';
+    src: url('../font/pmncaecilia.woff') format('woff');
+}
+
+:root {
+    --font-priority1: Bebas;
+    --font-priority2: Gnuolane;
+    --font-priority3: Caecilia;
+    --font-priority4: Arial;
+    --size-priority1: 2.5rem;
+    --size-priority2: 2rem;
+    --size-priority3: 1rem;
+    --size-priority4: 0.75rem;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+i[class^="icon-"]:before, i[class*=" icon-"]:before {
+  margin: 0;
+}
+
+html {
+    font-size: 18px;
+}
+
+html, body, .page {
+    width: 100%;
+    height: 100%;
+}
+
+.page {}
+
+header {
+    height: 30%;
+    background: #666;
+    width: 100%;
+    overflow: hidden;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: solid #eee 4px;
+}
+
+header > h1 {
+    color: white;
+    font-family: var(--font-priority1);
+    font-size: var(--size-priority1);
+    white-space: nowrap;
+    word-spacing: 0.25rem;
+}
+
+section {}
+
+section > h3 {}
+
+section > p {}
+
+footer {
+    background: #909090;
+    width: 100%;
+    padding: 1rem;
+    height: auto;
+}
+
+footer > p {
+    color: white;
+    font-family: var(--font-priority4);
+    font-size: var(--size-priority4);
+}
+
+footer > a {
+    width: 0.5rem;
+    height: 0.5rem;
+    
+}
+
+footer > a > i {
+    font-size: var(--size-priority4);
+    color: white;
+}
+
