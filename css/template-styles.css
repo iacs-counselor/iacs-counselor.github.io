@@ -22,10 +22,11 @@
     --size-priority2: 2rem;
     --size-priority3: 1rem;
     --size-priority4: 0.75rem;
-    --color-priority1: #efefef;
+    --color-priority1: #f0f0f0;
     --color-priority2: #fff;
     --theme-priority1: #5fdaff;
     --theme-priority2: #f0f0f0;
+    --theme-priority3: #AFECFF;
 }
 
 * {
@@ -46,20 +47,49 @@ html, body, .page {
     height: 100%;
 }
 
-page {
-    height: 200vh;
+.burger {
+    margin-top: 0.5rem;
+    -webkit-appearance: none;
+    border: none;
+    box-sizing: none;
+    position: fixed;
+    color: #fff;
+    font-size: 1.5rem;
+    z-index: 2;
+    transition: color 0.3s ease-in-out;
+}
+
+.burger:focus {
+    outline: none;
+}
+
+.burger:checked {
+    background: transparent;
+    color: white;
+}
+
+.burger:checked + nav {
+    width: 9rem;
+    padding: 4.5rem 1rem 0 1rem;
 }
 
 nav {
+    z-index: 1;
+    padding-top: 4.5rem;
+    height: calc(100% - 4.5rem);
+    overflow: hidden;
+    width: 0;
     position: fixed;
     top: 0;
     left: 0;
     display: flex;
     flex-direction: column;
+    background: var(--theme-priority3);
+    transition: width 0.5s ease-in-out, padding-left 0.5s ease-in-out, padding-right 0.5s ease-in-out;
 }
 
 nav > a {
-    font-size: var(--size-priority4);
+    font-size: var(--size-priority2);
     text-decoration: none;
     color: var(--color-priority2);
     font-family: var(--font-priority4);
@@ -103,7 +133,7 @@ section {
 section > h3 {
     font-size: var(--size-priority2);
     font-family: var(--font-priority2);
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.5rem;
 }
 
 section > article {
@@ -113,6 +143,7 @@ section > article {
 section > article > p {
     font-size: var(--size-priority3);
     font-family: var(--font-priority3);
+    line-height: 1.5rem;
 }
 
 footer {
@@ -163,12 +194,18 @@ footer > a > i::before {
         font-size: 35px;
     }
 
+    .burger {
+        display: none;
+    }
+
     nav {
+        background: rgba(255, 255, 255, 0.5);
+        height: auto;
+        padding: 0;
         width: 100%;
         position: fixed;
         top: 0;
         left: 0;
-        background: rgba(255, 255, 255, 0.5);
         padding: 0.05rem 0.25rem;
         display: flex;
         flex-direction: row;
@@ -186,10 +223,6 @@ footer > a > i::before {
     section {
         padding-left: 4%;
         width: 94%;
-    }
-
-    section > article {
-        padding-right: 10rem;
     }
 
     .facebook:hover {
@@ -218,5 +251,11 @@ footer > a > i::before {
     
     .email:hover {
         background: #e25714;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    section > article {
+        padding-right: 8rem;
     }
 }
