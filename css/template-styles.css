@@ -98,7 +98,7 @@ nav>a {
 	font-family: var(--font-priority4);
 }
 
-header {
+.page>header {
 	height: 10rem;
 	background: var(--theme-priority1);
 	width: 100%;
@@ -110,7 +110,7 @@ header {
 	border-bottom: solid #eee 4px;
 }
 
-header>h1 {
+.page>header>h1 {
 	color: var(--color-priority1);
 	font-family: var(--font-priority1);
 	font-size: var(--size-priority1);
@@ -118,7 +118,7 @@ header>h1 {
 	letter-spacing: 0.01rem;
 }
 
-header>h2 {
+.page>header>h2 {
 	color: var(--color-priority1);
 	font-family: var(--font-priority2);
 	font-size: var(--font-priority2);
@@ -133,7 +133,7 @@ section {
 	background: var(--theme-priority2);
 }
 
-section>h3 {
+section>header>h3 {
 	font-size: var(--size-priority2);
 	font-family: var(--font-priority2);
 	margin-bottom: 0.5rem;

@@ -1,0 +1,31 @@
+section>header {
+	display: flex;
+	flex-direction: row;
+}
+
+section>header>img {
+	object-fit: cover;
+	width: 8rem;
+	height: 8rem;
+	border-radius: 50%;
+	margin-left: 1.7rem;
+	margin-bottom: 0.75rem;
+}
+
+section>header>div {}
+
+section>header>div>h3 {
+	margin-left: 1rem;
+	margin-top: 4rem;
+	transform: translateY(-50%);
+	font-size: var(--size-priority2);
+	font-family: var(--font-priority2);
+}
+
+section>header>div>article {}
+
+section>header>div>article>p {}
+
+@media only screen and (min-width: 550px) {
+	/* TODO: Add stuff for image */
+}

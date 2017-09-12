@@ -1,4 +1,4 @@
-let header_height = getComputedStyle(document.querySelector('header')).height
+let header_height = getComputedStyle(document.querySelector('.page>header')).height
 header_height = +header_height.substr(0, header_height.length - 2)
 let nav
 let update_nav_color_scroll
@@ -55,7 +55,7 @@ window.addEventListener('scroll', (e) => {
 
 let update_heights = () => {
 	setTimeout(() => {
-		header_height = getComputedStyle(document.querySelector('header')).height
+		header_height = getComputedStyle(document.querySelector('.page>header')).height
 		header_height = +header_height.substr(0, header_height.length - 2)
 		nav_height = getComputedStyle(nav).height
 		nav_height = +nav_height.substr(0, nav_height.length - 2)
