@@ -5,27 +5,92 @@ section>header {
 
 section>header>img {
 	object-fit: cover;
-	width: 8rem;
-	height: 8rem;
+	width: 7rem;
+	height: 7rem;
 	border-radius: 50%;
-	margin-left: 1.7rem;
-	margin-bottom: 0.75rem;
+	margin-left: 0.7rem;
+	margin-bottom: 0.55rem;
+	margin-top: auto;
 }
 
-section>header>div {}
+section>header>div {
+	height: 4.6rem;
+	margin-top: 2.2rem;
+	margin-left: 0.8rem;
+	display: flex;
+	flex-direction: column;
+}
 
 section>header>div>h3 {
-	margin-left: 1rem;
-	margin-top: 4rem;
-	transform: translateY(-50%);
+	margin-top: 0.1rem;
 	font-size: var(--size-priority2);
 	font-family: var(--font-priority2);
 }
 
-section>header>div>article {}
+section>header>div>article {
+	display: flex;
+	flex-direction: column;
+}
 
-section>header>div>article>p {}
+section>header>div>article>p {
+	font-size: var(--size-priority4);
+	font-family: var(--font-priority4);
+	margin-bottom: 0.1rem;
+}
+
+section>header>div>article>p:nth-child(1) {
+	margin-left: -0.35rem;
+}
+
+section>header>div>article>p:nth-child(2) {
+	margin-left: -1rem;
+}
+
+section>article>p {
+	margin-top: 0.5rem;
+}
+
+@media only screen and (max-width: 370px) {
+	section>header {
+		margin-bottom: -0.3rem;
+	}
+
+	section>header>img {
+		width: 4.5rem;
+		height: 4.5rem;
+		margin-left: 0.4rem;
+		margin-bottom: 1rem;
+	}
+
+	section>header>div {
+		flex-direction: column;
+		margin-left: 0.8rem;
+		margin-top: 1rem;
+	}
+
+	section>header>div>article {
+		margin-left: -0.3rem;
+	}
+
+	section>header>div>article>p:nth-child(1) {
+		margin-left: -0.08rem;
+	}
+
+	section>header>div>article>p:nth-child(2) {
+		margin-left: -0.80rem;
+	}
+}
 
 @media only screen and (min-width: 550px) {
-	/* TODO: Add stuff for image */
+	section>article>p {
+		text-indent: 1.5rem;
+	}
+
+	section>header>div>article {
+		flex-direction: column-reverse;
+	}
+
+	section>header>div>article>p {
+		margin-left: 0 !important;
+	}
 }
