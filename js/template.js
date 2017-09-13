@@ -3,7 +3,7 @@ header_height = +header_height.substr(0, header_height.length - 2)
 let nav
 let update_nav_color_scroll
 let rgb = 255
-let burger = document.querySelector('.burger')
+let burger = document.querySelector('label[for="check"]')
 
 desktop = () => {
 	nav.style.backgroundColor = `rgba(${rgb},${rgb},${rgb},0.5)`
@@ -23,7 +23,7 @@ if (window.innerWidth >= 550) {
 	update_nav_color_scroll = desktop
 	current = 'desktop'
 } else {
-	nav = document.querySelector('.burger')
+	nav = document.querySelector('label[for="check"]')
 	update_nav_color_scroll = mobile
 	current = 'mobile'
 }
@@ -41,15 +41,9 @@ window.addEventListener('scroll', (e) => {
 	} else if (rgb > 0 && window.pageYOffset > header_height) {
 		rgb = 0
 		update_nav_color_scroll()
-		if (current === 'desktop') {
-			document.querySelector('nav').classList.add('scrolled')
-		}
 	} else if (rgb < 255 && window.pageYOffset < header_height) {
 		rgb = 255
 		update_nav_color_scroll()
-		if (current === 'desktop') {
-			document.querySelector('nav').classList.remove('scrolled')
-		}
 	}
 })
 
