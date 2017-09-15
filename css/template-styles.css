@@ -22,8 +22,8 @@
 	--size-priority2: 2rem;
 	--size-priority3: 1rem;
 	--size-priority4: 0.75rem;
-	--color-priority1: #fff;
-	--color-priority2: #fefefe;
+	--color-priority1: #fefefe;
+	--color-priority2: #fff;
 	--theme-priority1: #5fdaff;
 	--theme-priority2: #f0f0f0;
 	--theme-priority3: #AFECFF;
@@ -66,7 +66,7 @@ label[for='check'] {
 	position: fixed;
 	color: #fff;
 	font-size: 1.5rem;
-	z-index: 2;
+	z-index: 9999;
 	transition: color 0.3s ease-in-out;
 }
 
@@ -81,7 +81,7 @@ label[for='check'] {
 }
 
 nav {
-	z-index: 1;
+	z-index: 9998;
 	padding-top: 4.5rem;
 	height: calc(100% - 4.5rem);
 	overflow: hidden;
@@ -133,7 +133,7 @@ nav>a {
 
 section {
 	width: 96%;
-	padding: 1.25rem 2%;
+	padding: 1.75rem 2% 1.5rem;
 	background: var(--theme-priority2);
 }
 
@@ -145,12 +145,13 @@ section>header>h3 {
 
 section>article {
 	padding: 0 1rem;
+	margin-top: 0.85rem;
 }
 
 section>article>p {
-	font-size: var(--size-priority3);
 	font-family: var(--font-priority3);
-	line-height: 1.5rem;
+	font-size: var(--size-priority3);
+	line-height: 1.4rem;
 }
 
 footer {
@@ -255,6 +256,15 @@ footer>a>i::before {
 		padding-left: 4%;
 		width: 94%;
 	}
+
+	section>article {
+		margin-top: 0;
+	}
+
+	section>article>p {
+		font-size: var(--size-priority4);
+		line-height: 1rem;
+	}
 	
 	.facebook:hover {
 		background: #3d5b99;
@@ -287,6 +297,9 @@ footer>a>i::before {
 
 @media only screen and (min-width: 1200px) {
 	section>article {
-		padding-right: 8rem;
+		padding-right: 7rem;
+	}
+	section>article>p {
+		margin-left: 3.5rem;
 	}
 }
